@@ -1,4 +1,4 @@
 runging:
 	- node fileName
 
-![Image](read.png)
+![Image](read.gif)
