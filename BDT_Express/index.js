@@ -29,17 +29,59 @@
 // Lesson 3 - PUG 
 
 
+// var express 	= require('express');
+// var app 		= express();
+// var port 		= process.argv[2];
+// var viewpath	= process.argv[3];
+
+// app.set('views', viewpath);
+// app.set( 'view engine', 'pug');
+
+// app.get('/home', function(req,res) {
+// 	res.render('index',{date: new Date().toDateString()});
+// })
+
+// app.listen(port);
+
+
+
+// =========================================
+// tes dengan postman dengan body form-url-encode
+// key str : value bebas di isi
+// Lesson 4 -  OLD FORM
+
 var express 	= require('express');
+var bodyParser	= require('body-parser');
 var app 		= express();
 var port 		= process.argv[2];
-var viewpath	= process.argv[3];
 
-app.set('views', viewpath);
+app.use(bodyParser.urlencoded({extended:false}))
+app.set('views','view');
 app.set( 'view engine', 'pug');
 
-app.get('/home', function(req,res) {
-	res.render('index',{date: new Date().toDateString()});
+app.get('/form', function(req,res) {
+	res.render('index');
 })
 
-app.listen(port);
+app.post('/form', function(req,res) {
+	res.end(req.body.str.split('').reverse().join(''));
+})
+
+app.listen(port)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
