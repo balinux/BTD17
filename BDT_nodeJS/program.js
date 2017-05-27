@@ -42,19 +42,41 @@
 
 // LEARN 5
 
-var fs 		= require('fs');
-var path 	= require('path');
+// var modul 	= require('modul.js');
+// var fs 		= require('fs');
+// var path 	= require('path');
 
-var folder	= process.argv[2];
-var ext 	= '.'+ process.argv[3];
+// var folder	= process.argv[2];
+// var ext 	= '.'+ process.argv[3];
 
 
-fs.readdir(folder, function(err, files) {
-	console.log(files);
-	if (err) return console.error(err);
-	files.forEach(function(file) {
-		if (path.extname(file)===ext) {
-			console.log(file);
-		}
-	})
-});
+// fs.readdir(folder, function(err, files) {
+// 	console.log(files);
+// 	if (err) return console.error(err);
+// 	files.forEach(function(file) {
+// 		if (path.extname(file)===ext) {
+// 			console.log(file);
+// 		}
+// 	})
+// });
+
+
+// LEARN 6
+
+// var modul 	= require('./modul');
+
+// modul(process.argv[2],process.argv[3], function(err,data) {
+//  	data.forEach(function(item) {
+//  		console.log(item);
+//  	});
+//  	}
+// });
+
+// LEARN 7 http Client 
+
+var http =  require('http');
+
+http.get('http://google.com', 'utf8', function(err,data) {
+	var = raw
+})
+
